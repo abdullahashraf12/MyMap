@@ -1,0 +1,61 @@
+<html>
+<head>
+  <!-- <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' /> -->
+  <!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script> -->
+  <link href='./leaflet.css' rel='stylesheet' />
+  <script src='./leaflet.js'></script>
+
+</head>
+<body>
+  <div id='map' style='width: 100%; height: 100%;'></div>
+  <script>
+    
+    const key = 'YOUR_MAPTILER_API_KEY_HERE';
+      const map = L.map('map').setView([30.0441814,31.1832109], 14); //starting position
+      L.tileLayer("http://127.0.0.1:3000/styles/basic-preview/{z}/{x}/{y}@2x.png",{ //style URL
+        tileSize: 512,
+        zoomOffset: -1,
+        minZoom: 1,
+        maxZoom: 18,
+        attribution: "My Map",
+        crossOrigin: true,
+        detectRetina:true
+      }).addTo(map);
+      var marker = L.marker([30.0476308,31.1913505]).addTo(map);
+
+
+
+
+//     var map = new mapboxgl.Map({
+//       container: 'map',
+//       style: {
+//         version: 8,
+//         sources: {
+//           tiles: {
+//             type: 'vector',
+//             tiles: ['http://localhost:3000/{z}/{x}/{y}.pbf'],
+//             minzoom: 0,
+//             maxzoom: 14
+//           }
+//         },
+//         layers: [
+
+//         { "id": "my-layer",
+//   "type": "fill",
+//   "source": "",
+//   "source-layer": "my-source-layer",
+//   "paint": {
+//     "fill-color": "blue"
+//   }
+// }
+        
+        
+        
+//         ]
+//       },
+//       center: [30.0441814,31.1832109],
+//       zoom: 12
+//     });
+  </script>
+</body>
+</html>
