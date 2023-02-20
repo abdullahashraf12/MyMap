@@ -1,5 +1,16 @@
 /* required styles */
-
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+  }
+#refreshButton {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 10px;
+	z-index: 500;
+  }
 .leaflet-pane,
 .leaflet-tile,
 .leaflet-marker-icon,
